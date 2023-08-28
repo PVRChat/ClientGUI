@@ -80,6 +80,7 @@ class ChatClientGUI:
         message = self.message_entry.get()
         if message:
             full_message = f"{message}"
+            self.display_message(f">>> {message}")
             self.client_socket.send(full_message.encode())
             self.message_entry.delete(0, tk.END)
 
