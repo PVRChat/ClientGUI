@@ -87,6 +87,7 @@ class ChatClientGUI:
         self.chat_text.config(state=tk.NORMAL)
         self.chat_text.insert(tk.END, message + "\n")
         self.chat_text.config(state=tk.DISABLED)
+        self.chat_text.see(tk.END)
 
     def on_closing(self):
         self.client_socket.close()
