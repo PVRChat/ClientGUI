@@ -12,7 +12,10 @@ class ChatClientGUI:
         self.connected = False
 
         self.root = tk.Tk()
-        self.root.title("Chat Client")
+        self.root.title("PVRC Client")
+        icon_path = "./assets/logo.png"
+        icon = tk.PhotoImage(file=icon_path)
+        self.root.iconphoto(True, icon)
 
         self.ip_label = tk.Label(self.root, text="Enter server IP:")
         self.ip_label.pack()
